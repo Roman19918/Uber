@@ -164,6 +164,24 @@ body {
   text-transform: uppercase;
 }
 
+.label-section-style {
+  padding: 8px 12px 6px;
+  background-color: #000000;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 11px;
+  font-weight: 100;
+}
+
+.title-section-style {
+  color: #222222;
+  font-family: Roboto;
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 /*Header styles start*/
 .header {
   position: fixed;
@@ -318,3 +336,64 @@ body {
 }
 
 /*Intro styles end*/
+/*Advantages styles start*/
+.advantages {
+  padding: 71px 0 68px;
+}
+.advantages .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 35px;
+}
+.advantages__label {
+  margin-bottom: 44px;
+}
+.advantages__title {
+  margin-bottom: 40px;
+}
+.advantages__card-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+}
+.advantages__cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.advantages__card {
+  display: flex;
+  align-items: center;
+  flex-basis: 42.54%;
+  flex-grow: 1;
+}
+.advantages__card:not(:first-child) {
+  margin-left: 100px;
+}
+.advantages__card-picture {
+  max-width: 113px;
+}
+.advantages__card-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 26px;
+}
+.advantages__card-title {
+  flex-shrink: 2;
+  font-family: Roboto;
+  text-align: justify;
+  color: #1eacc7;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.advantages__card-desc {
+  font-family: Roboto;
+  text-align: justify;
+  color: #202020;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+/*Advantages styles end*/
