@@ -1,1 +1,320 @@
-@import url(nullstyle.scss);
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* roboto-100 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/roboto-v30-cyrillic_latin-100.woff2") format("woff2"), url("../fonts/roboto-v30-cyrillic_latin-100.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-300 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/roboto-v30-cyrillic_latin-300.woff2") format("woff2"), url("../fonts/roboto-v30-cyrillic_latin-300.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-cyrillic_latin-regular.woff2") format("woff2"), url("../fonts/roboto-v30-cyrillic_latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto-v30-cyrillic_latin-500.woff2") format("woff2"), url("../fonts/roboto-v30-cyrillic_latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-cyrillic_latin-700.woff2") format("woff2"), url("../fonts/roboto-v30-cyrillic_latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-900 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/roboto-v30-cyrillic_latin-900.woff2") format("woff2"), url("../fonts/roboto-v30-cyrillic_latin-900.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nokia-sans-s60-400 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nokia - Sans - S 60";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Nokia Sans S60 Regular.woff2") format("woff2"), url("../fonts/Nokia-Sans-S60-Regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+body {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.button-style {
+  background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+  border-radius: 5px;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
+  color: #ffffff;
+  font-family: Roboto;
+  text-transform: uppercase;
+}
+
+/*Header styles start*/
+.header {
+  position: fixed;
+  z-index: 10;
+  background-color: #212121;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding: 0 40px;
+}
+.header__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.header__menu-item {
+  flex-grow: 1;
+  border-left: 2px dotted black;
+  text-align: center;
+}
+.header__menu-item:first-child {
+  border-left: none;
+}
+.header__menu-link {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 31px;
+}
+
+/*Header styles end*/
+/*Subheader styles start*/
+.subheader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #000000;
+  opacity: 0.6;
+}
+
+.subheader {
+  position: relative;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 0;
+}
+.subheader__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 96px;
+  height: 84px;
+}
+.subheader__logo-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.subheader__logo-ico {
+  max-width: 32px;
+}
+.subheader__logo-link {
+  position: relative;
+  color: #ffffff;
+  font-family: "Nokia - Sans - S 60";
+  font-size: 26px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.95px;
+  padding-left: 9px;
+}
+.subheader__logo-subtitle {
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: 100;
+}
+.subheader__contact {
+  display: flex;
+}
+.subheader__contact-text {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: right;
+  margin-bottom: 8px;
+}
+.subheader__contact-tel {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: right;
+  text-transform: uppercase;
+}
+.subheader__contact-button {
+  margin-left: 32px;
+  padding: 0px 20px;
+  font-size: 14px;
+}
+
+/*Subheader styles end*/
+/*Intro styles start*/
+.intro {
+  background: url(../img/intro_back.webp) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 25.25vh;
+}
+.intro__main {
+  padding: 0px 96px;
+  font-family: Roboto;
+  color: #ffffff;
+  text-align: center;
+}
+.intro__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 60px;
+  margin-bottom: 1.625vh;
+}
+.intro__subtitle {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 48px;
+  margin-bottom: 2.875vh;
+}
+.intro__desc {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 14.75vh;
+}
+.intro__button-send {
+  font-size: 18px;
+  line-height: 63px;
+  padding: 0px 39px;
+}
+
+/*Intro styles end*/
