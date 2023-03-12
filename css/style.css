@@ -164,6 +164,13 @@ body {
   text-transform: uppercase;
 }
 
+.button-style:hover,
+.button-style:active,
+.button-style:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+}
+
 .label-section-style {
   padding: 8px 12px 6px;
   background-color: #000000;
@@ -180,6 +187,12 @@ body {
   font-size: 38px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.subtitle-section-style {
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 /*Header styles start*/
@@ -205,6 +218,7 @@ body {
   width: 100%;
 }
 .header__menu-item {
+  position: relative;
   flex-grow: 1;
   border-left: 2px dotted black;
   text-align: center;
@@ -217,6 +231,21 @@ body {
   font-size: 15px;
   font-weight: 300;
   line-height: 31px;
+}
+.header__menu-link:after {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: "";
+  background: #aaa;
+  height: 2px;
+  transition: all 0.8s;
+}
+.header__menu-link:hover:after, .header__menu-link:active:after, .header__menu-link:focus:after {
+  width: 100%;
 }
 
 /*Header styles end*/
@@ -291,7 +320,12 @@ body {
   text-align: right;
   text-transform: uppercase;
 }
+.subheader__contact-tel:hover, .subheader__contact-tel:active, .subheader__contact-tel:focus {
+  color: #8de3ff;
+  transition: all 0.5s;
+}
 .subheader__contact-button {
+  position: relative;
   margin-left: 32px;
   padding: 0px 20px;
   font-size: 14px;
@@ -344,7 +378,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 35px;
+  padding: 0 30px;
 }
 .advantages__label {
   margin-bottom: 44px;
@@ -359,16 +393,16 @@ body {
 }
 .advantages__cards {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .advantages__card {
   display: flex;
   align-items: center;
-  flex-basis: 42.54%;
+  max-width: 480px;
   flex-grow: 1;
-}
-.advantages__card:not(:first-child) {
-  margin-left: 100px;
+  padding: 0 5px;
+  margin-bottom: 35px;
 }
 .advantages__card-picture {
   max-width: 113px;
@@ -377,6 +411,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 26px;
+  flex-shrink: 2;
 }
 .advantages__card-title {
   flex-shrink: 2;
@@ -397,3 +432,112 @@ body {
 }
 
 /*Advantages styles end*/
+/*Mibile-app style start*/
+.mobile-app {
+  padding: 48px 0 80px;
+}
+.mobile-app .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 22px;
+}
+.mobile-app__label {
+  margin-bottom: 38px;
+}
+.mobile-app__title {
+  margin-bottom: 19px;
+  text-align: center;
+}
+.mobile-app__subtitle {
+  color: #222222;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.mobile-app__card-block {
+  display: flex;
+  flex-direction: column;
+}
+.mobile-app__cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 19px;
+}
+.mobile-app__card {
+  position: relative;
+  flex-basis: 33.33%;
+  max-width: 320px;
+  flex-grow: 2;
+  height: 280px;
+  margin: 0 2px;
+}
+.mobile-app__card:hover, .mobile-app__card:active, .mobile-app__card:focus {
+  transform: scale(1.05);
+}
+.mobile-app__card-title {
+  position: absolute;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 91px;
+}
+.mobile-app__card-button {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: #000000;
+  bottom: 35px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 4;
+}
+.mobile-app__card-button:hover, .mobile-app__card-button:active, .mobile-app__card-button:focus {
+  background-color: #1fbad6;
+}
+.mobile-app__card-button:hover:after, .mobile-app__card-button:active:after, .mobile-app__card-button:focus:after, .mobile-app__card-button:hover:before, .mobile-app__card-button:active:before, .mobile-app__card-button:focus:before {
+  background-color: #000000;
+}
+.mobile-app__card-button:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 2px;
+  background-color: #1fbad6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.mobile-app__card-button:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 14px;
+  background-color: #1fbad6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.mobile-app__card-btn-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+.mobile-app__card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/*Mibile-app style end*/
