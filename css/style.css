@@ -435,6 +435,7 @@ body {
 /*Mibile-app style start*/
 .mobile-app {
   padding: 48px 0 80px;
+  background-image: url("/img/mibile-app_back.webp");
 }
 .mobile-app .wrapper {
   display: flex;
@@ -483,6 +484,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   top: 91px;
+  width: 100%;
 }
 .mobile-app__card-button {
   position: absolute;
@@ -541,3 +543,43 @@ body {
 }
 
 /*Mibile-app style end*/
+/*Slogan style start*/
+.slogan {
+  padding: 56px 0 158px;
+  background-image: url("/img/slogan_back.webp");
+}
+.slogan .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slogan__label {
+  color: #070716;
+  background-color: #ffffff;
+  margin-bottom: 32px;
+}
+.slogan__title {
+  color: #ffffff;
+  margin-bottom: 19px;
+}
+.slogan__subtitle {
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+.slogan__picture {
+  max-width: 759px;
+  margin-bottom: 4px;
+}
+.slogan__img {
+  width: 100%;
+}
+.slogan__text {
+  color: #222222;
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+}
+
+/*Slogan style end*/
