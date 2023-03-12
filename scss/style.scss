@@ -365,6 +365,7 @@ body {
         flex-grow: 2;
         height: 280px;
         margin: 0 2px;
+        transition: all 0.3s;
     }
 
     &__card:hover,
@@ -624,6 +625,7 @@ body {
     }
 
     &__footer {
+        position: relative;
         display: block;
         margin-bottom: 49px;
         color: #1fbad6;
@@ -633,5 +635,226 @@ body {
         text-align: center;
         text-transform: uppercase;
     }
+
+    &__footer:after {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: "";
+        background: #1fbad6;
+        height: 2px;
+        transition: all 0.8s;
+    }
+
+    &__footer:hover:after,
+    &__footer:active:after,
+    &__footer:focus:after {
+        width: 100%;
+    }
 }
 /*Cities style end*/
+
+/*Footer style start*/
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 23px 39px;
+    &__social-networks {
+        padding-top: 10px;
+        flex-basis: 300px;
+    }
+
+    &__social-networks-link {
+        font-size: 32px;
+        color: black;
+    }
+
+    ._icon-facebook:hover {
+        color: #3c62a0;
+    }
+
+    ._icon-twitter:hover {
+        color: #1da1f2;
+    }
+
+    ._icon-instagram:hover {
+        color: #e03266;
+    }
+
+    ._icon-linkedin:hover {
+        color: #007bb6;
+    }
+
+    &__menu {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 390px;
+    }
+
+    &__menu:after {
+        position: absolute;
+        content: "";
+        width: 300px;
+        height: 4px;
+        background-color: #1fbad6;
+        top: -34px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__menu-header {
+    }
+
+    &__menu-header-list {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 15px;
+    }
+
+    &__menu-header-item {
+    }
+
+    &__menu-header-link {
+        position: relative;
+        color: #070716;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &__menu-header-link:after {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: "";
+        background: #070716;
+        height: 2px;
+        transition: all 0.5s;
+    }
+
+    &__menu-header-link:hover:after,
+    &__menu-header-link:active:after,
+    &__menu-header-link:focus:after {
+        width: 100%;
+    }
+
+    &__menu-main {
+    }
+
+    &__menu-main-list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 19px;
+    }
+
+    &__menu-main-item {
+    }
+
+    &__menu-main-link {
+        position: relative;
+        color: #999999;
+        font-family: Roboto;
+        font-size: 11px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &__menu-main-link:after {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: "";
+        background: #999999;
+        height: 2px;
+        transition: all 0.5s;
+    }
+
+    &__menu-main-link:hover:after,
+    &__menu-main-link:active:after,
+    &__menu-main-link:focus:after {
+        width: 100%;
+    }
+
+    &__link-change-the-language {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        // Style for "русский"
+        color: #1fbad6;
+        font-family: Roboto;
+        font-size: 11px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &__link-change-the-language:after {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: "";
+        background: #1fbad6;
+        height: 2px;
+        transition: all 0.5s;
+    }
+
+    &__link-change-the-language:hover:after,
+    &__link-change-the-language:active:after,
+    &__link-change-the-language:focus:after {
+        width: 100%;
+    }
+
+    &__stores {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 10px;
+    }
+
+    &__stores-link {
+        height: 25px;
+        width: 78px;
+        margin-left: 10px;
+    }
+
+    &__store {
+        translate: all 0.3s;
+    }
+
+    &__store:hover,
+    &__store:active,
+    &__store:focus {
+        transform: scale(1.2);
+    }
+
+    .app-store,
+    .google-play,
+    .windows-store {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.footer:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 8px;
+    background-color: #070716;
+    left: 0;
+    bottom: 0;
+}
+/*Footer style end*/
