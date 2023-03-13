@@ -211,6 +211,11 @@ body {
   width: 100%;
   padding: 0 40px;
 }
+@media screen and (max-width: 768px) {
+  .header__menu {
+    padding: 0 20px;
+  }
+}
 .header__menu-list {
   display: flex;
   flex-wrap: wrap;
@@ -277,10 +282,31 @@ body {
   padding: 0 96px;
   height: 84px;
 }
+@media screen and (max-width: 992px) {
+  .subheader__header {
+    padding: 0 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .subheader__header {
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .subheader__header {
+    padding: 0 15px;
+  }
+}
 .subheader__logo-title {
   display: flex;
   align-items: center;
   margin-bottom: 6px;
+}
+@media screen and (max-width: 576px) {
+  .subheader__logo-title {
+    margin-bottom: 2px;
+    align-items: flex-end;
+  }
 }
 .subheader__logo-ico {
   max-width: 32px;
@@ -295,6 +321,11 @@ body {
   letter-spacing: 1.95px;
   padding-left: 9px;
 }
+@media screen and (max-width: 576px) {
+  .subheader__logo-link {
+    font-size: 20px;
+  }
+}
 .subheader__logo-subtitle {
   color: #ffffff;
   font-family: "Roboto";
@@ -303,6 +334,11 @@ body {
 }
 .subheader__contact {
   display: flex;
+}
+@media screen and (max-width: 576px) {
+  .subheader__contact-desc {
+    display: none;
+  }
 }
 .subheader__contact-text {
   color: #ffffff;
@@ -324,11 +360,47 @@ body {
   color: #8de3ff;
   transition: all 0.5s;
 }
+.subheader .button-text-medium-active {
+  display: none;
+}
 .subheader__contact-button {
+  display: flex;
+  align-items: center;
   position: relative;
   margin-left: 32px;
   padding: 0px 20px;
   font-size: 14px;
+}
+@media screen and (min-width: 769px) {
+  .subheader__contact-button .button-text-medium {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .subheader__contact-button {
+    font-size: 20px;
+    padding: 0px 12px;
+    margin-left: 20px;
+  }
+  .subheader__contact-button .button-text-large {
+    display: none;
+  }
+  .subheader__contact-button .button-text-medium {
+    display: block;
+  }
+}
+@media screen and (max-width: 576px) {
+  .subheader__contact-button {
+    font-size: 40px;
+    padding: 10px 10px;
+    margin-left: 5px;
+  }
+}
+.subheader__contact-button:hover .button-text-medium, .subheader__contact-button:active .button-text-medium, .subheader__contact-button:focus .button-text-medium {
+  display: none;
+}
+.subheader__contact-button:hover .button-text-medium-active, .subheader__contact-button:active .button-text-medium-active, .subheader__contact-button:focus .button-text-medium-active {
+  display: block;
 }
 
 /*Subheader styles end*/
@@ -344,6 +416,16 @@ body {
   font-family: Roboto;
   color: #ffffff;
   text-align: center;
+}
+@media screen and (max-width: 992px) {
+  .intro__main {
+    padding: 0px 66px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro__main {
+    padding: 0px 46px;
+  }
 }
 .intro__title {
   font-weight: 700;
@@ -400,9 +482,10 @@ body {
   display: flex;
   align-items: center;
   max-width: 480px;
-  flex-grow: 1;
+  flex-grow: 2;
   padding: 0 5px;
   margin-bottom: 35px;
+  flex-basis: 50%;
 }
 .advantages__card-picture {
   max-width: 113px;
@@ -846,6 +929,7 @@ body {
   display: flex;
   justify-content: flex-end;
   padding-top: 10px;
+  flex-basis: 300px;
 }
 .footer__stores-link {
   height: 25px;
