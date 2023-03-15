@@ -280,15 +280,13 @@ body {
     background: url(../img/intro_back.webp) no-repeat center;
     background-size: cover;
     height: 100vh;
-    padding-top: 25.25vh;
+    padding-top: 27.25vh;
     @media screen and (max-width: 992px) {
-
     }
     @media screen and (max-width: 768px) {
         padding-top: 22.25vh;
     }
     @media screen and (max-width: 576px) {
-        padding-top: 20.25vh;
     }
     &__main {
         padding: 0px 96px;
@@ -310,7 +308,7 @@ body {
         font-weight: 700;
         text-transform: uppercase;
         font-size: 60px;
-        margin-bottom: 1.625vh;
+        margin-bottom: 2.625vh;
         @media screen and (max-width: 992px) {
             font-size: 53px;
         }
@@ -339,7 +337,9 @@ body {
             font-size: 21px;
             line-height: 28px;
         }
-
+        @media screen and (max-width: 420px) {
+            margin-bottom: 1.875vh;
+        }
     }
 
     &__desc {
@@ -354,8 +354,13 @@ body {
         }
         @media screen and (max-width: 576px) {
             font-size: 16px;
-            text-align: left;
-            line-height: 17px;
+            line-height: 16px;
+        }
+        @media screen and (max-width: 420px) {
+            margin-bottom: 10.15vh;
+            .hide-small-screen {
+                display: none;
+            }
         }
     }
 
@@ -370,11 +375,21 @@ body {
 /*Advantages styles start*/
 .advantages {
     padding: 71px 0 68px;
+    @media screen and (max-width: 768px) {
+        padding: 31px 0 28px;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 30px;
+        padding: 0 40px;
+        @media screen and (max-width: 992px) {
+        }
+        @media screen and (max-width: 768px) {
+            padding: 0 25px;
+        }
+        @media screen and (max-width: 576px) {
+        }
     }
 
     &__label {
@@ -382,7 +397,16 @@ body {
     }
 
     &__title {
+        font-size: 38px;
         margin-bottom: 40px;
+        text-align: center;
+        @media screen and (max-width: 992px) {
+        }
+        @media screen and (max-width: 768px) {
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 25px;
+        }
     }
 
     &__card-block {
@@ -395,27 +419,67 @@ body {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin: 0px -50px;
+        @media screen and (max-width: 992px) {
+            margin: 0px -20px;
+        }
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+        @media screen and (max-width: 576px) {
+        }
     }
 
     &__card {
+        position: relative;
         display: flex;
         align-items: center;
-        max-width: 480px;
-        flex-grow: 2;
-        padding: 0 5px;
+        flex: 1 1 50%;
+        padding: 0 50px;
         margin-bottom: 35px;
-        flex-basis: 50%;
+        @media screen and (max-width: 992px) {
+            padding: 0 20px;
+        }
+        @media screen and (max-width: 768px) {
+            max-width: 550px;
+        }
+        @media screen and (max-width: 576px) {
+        }
     }
 
-    &__card-picture {
+    &__card-pic {
         max-width: 113px;
+        @media screen and (max-width: 992px) {
+            max-width: 90px;
+        }
+        @media screen and (max-width: 768px) {
+        }
+        @media screen and (max-width: 576px) {
+        }
+        @media screen and (max-width: 420px) {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 40px;
+        }
     }
 
     &__card-text {
         display: flex;
         flex-direction: column;
+        flex: 1 1 auto;
         margin-left: 26px;
         flex-shrink: 2;
+        @media screen and (max-width: 992px) {
+        }
+        @media screen and (max-width: 768px) {
+        }
+        @media screen and (max-width: 576px) {
+            margin-left: 16px;
+        }
+        @media screen and (max-width: 420px) {
+            margin-left: 0;
+        }
     }
     &__card-title {
         flex-shrink: 2;
@@ -425,6 +489,10 @@ body {
         font-size: 17px;
         font-weight: 400;
         line-height: 21px;
+        @media screen and (max-width: 420px) {
+            height: 50px;
+            padding-left: 55px;
+        }
     }
 
     &__card-desc {
@@ -938,6 +1006,7 @@ body {
 
     &__stores {
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-end;
         padding-top: 10px;
         flex-basis: 300px;
