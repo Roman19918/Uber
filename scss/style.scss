@@ -146,12 +146,15 @@ body {
         height: 84px;
         @media screen and (max-width: 992px) {
             padding: 0 50px;
+            height: 80px;
         }
         @media screen and (max-width: 768px) {
             padding: 0 25px;
+            height: 75px;
         }
         @media screen and (max-width: 576px) {
             padding: 0 15px;
+            height: 70px;
         }
     }
 
@@ -253,7 +256,7 @@ body {
             margin-left: 20px;
         }
         @media screen and (max-width: 576px) {
-            font-size: 40px;
+            font-size: 35px;
             padding: 10px 10px;
             margin-left: 5px;
         }
@@ -278,16 +281,28 @@ body {
     background-size: cover;
     height: 100vh;
     padding-top: 25.25vh;
+    @media screen and (max-width: 992px) {
+
+    }
+    @media screen and (max-width: 768px) {
+        padding-top: 22.25vh;
+    }
+    @media screen and (max-width: 576px) {
+        padding-top: 20.25vh;
+    }
     &__main {
         padding: 0px 96px;
         font-family: Roboto;
         color: #ffffff;
         text-align: center;
         @media screen and (max-width: 992px) {
-            padding: 0px 66px;
+            padding: 0px 50px;
         }
         @media screen and (max-width: 768px) {
-            padding: 0px 46px;
+            padding: 0px 25px;
+        }
+        @media screen and (max-width: 576px) {
+            padding: 0px 15px;
         }
     }
 
@@ -296,20 +311,52 @@ body {
         text-transform: uppercase;
         font-size: 60px;
         margin-bottom: 1.625vh;
+        @media screen and (max-width: 992px) {
+            font-size: 53px;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 44px;
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 35px;
+        }
     }
 
     &__subtitle {
         font-size: 36px;
         text-transform: uppercase;
         font-weight: 700;
-        line-height: 48px;
         margin-bottom: 2.875vh;
+        @media screen and (max-width: 992px) {
+            font-size: 32px;
+            line-height: 39px;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 26px;
+            line-height: 33px;
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 21px;
+            line-height: 28px;
+        }
+
     }
 
     &__desc {
         font-size: 18px;
         line-height: 24px;
-        margin-bottom: 14.75vh;
+        margin-bottom: 12.15vh;
+        @media screen and (max-width: 992px) {
+            font-size: 18px;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 17px;
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 16px;
+            text-align: left;
+            line-height: 17px;
+        }
     }
 
     &__button-send {

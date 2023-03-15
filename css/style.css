@@ -285,16 +285,19 @@ body {
 @media screen and (max-width: 992px) {
   .subheader__header {
     padding: 0 50px;
+    height: 80px;
   }
 }
 @media screen and (max-width: 768px) {
   .subheader__header {
     padding: 0 25px;
+    height: 75px;
   }
 }
 @media screen and (max-width: 576px) {
   .subheader__header {
     padding: 0 15px;
+    height: 70px;
   }
 }
 .subheader__logo-title {
@@ -391,7 +394,7 @@ body {
 }
 @media screen and (max-width: 576px) {
   .subheader__contact-button {
-    font-size: 40px;
+    font-size: 35px;
     padding: 10px 10px;
     margin-left: 5px;
   }
@@ -411,6 +414,16 @@ body {
   height: 100vh;
   padding-top: 25.25vh;
 }
+@media screen and (max-width: 768px) {
+  .intro {
+    padding-top: 22.25vh;
+  }
+}
+@media screen and (max-width: 576px) {
+  .intro {
+    padding-top: 20.25vh;
+  }
+}
 .intro__main {
   padding: 0px 96px;
   font-family: Roboto;
@@ -419,12 +432,17 @@ body {
 }
 @media screen and (max-width: 992px) {
   .intro__main {
-    padding: 0px 66px;
+    padding: 0px 50px;
   }
 }
 @media screen and (max-width: 768px) {
   .intro__main {
-    padding: 0px 46px;
+    padding: 0px 25px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .intro__main {
+    padding: 0px 15px;
   }
 }
 .intro__title {
@@ -433,17 +451,66 @@ body {
   font-size: 60px;
   margin-bottom: 1.625vh;
 }
+@media screen and (max-width: 992px) {
+  .intro__title {
+    font-size: 53px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro__title {
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .intro__title {
+    font-size: 35px;
+  }
+}
 .intro__subtitle {
   font-size: 36px;
   text-transform: uppercase;
   font-weight: 700;
-  line-height: 48px;
   margin-bottom: 2.875vh;
+}
+@media screen and (max-width: 992px) {
+  .intro__subtitle {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro__subtitle {
+    font-size: 26px;
+    line-height: 33px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .intro__subtitle {
+    font-size: 21px;
+    line-height: 28px;
+  }
 }
 .intro__desc {
   font-size: 18px;
   line-height: 24px;
-  margin-bottom: 14.75vh;
+  margin-bottom: 12.15vh;
+}
+@media screen and (max-width: 992px) {
+  .intro__desc {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro__desc {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .intro__desc {
+    font-size: 16px;
+    text-align: left;
+    line-height: 17px;
+  }
 }
 .intro__button-send {
   font-size: 18px;
