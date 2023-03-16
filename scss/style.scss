@@ -370,7 +370,7 @@ body {
 
 /*Intro styles start*/
 .intro {
-    background: url(img/intro_back.webp) no-repeat center;
+    background: url(../img/intro_back.webp) no-repeat center;
     background-size: cover;
     height: 100vh;
     padding-top: 27.25vh;
@@ -584,7 +584,7 @@ body {
     @media screen and (max-width: 576px) {
         padding: 28px 0 40px;
     }
-    background-image: url("img/mibile-app_back.webp");
+    background-image: url("../img/mibile-app_back.webp");
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -724,7 +724,7 @@ body {
 /*Slogan style start*/
 .slogan {
     padding: 56px 15px 158px;
-    background-image: url("img/slogan_back.webp");
+    background-image: url("../img/slogan_back.webp");
     background-size: auto 100%;
     @media screen and (max-width: 576px) {
         padding: 30px 15px 40px;
@@ -865,14 +865,14 @@ body {
     }
 
     .list-green &__list-item {
-        background: url("img/green_list_ico.png") 19px 7px no-repeat;
+        background: url("../img/green_list_ico.png") 19px 7px no-repeat;
         @media screen and (max-width: 420px) {
             background-position: 19px 5px;
         }
     }
 
     .list-red &__list-item {
-        background: url("img/red_list_ico.png") 19px 7px no-repeat;
+        background: url("../img/red_list_ico.png") 19px 7px no-repeat;
         @media screen and (max-width: 420px) {
             background-position: 19px 5px;
         }
@@ -929,7 +929,7 @@ body {
         justify-content: space-between;
         height: 100%;
         padding: 0 10px;
-        background: url("img/cities_back.webp") center no-repeat;
+        background: url("../img/cities_back.webp") center no-repeat;
     }
 
     &__header {
