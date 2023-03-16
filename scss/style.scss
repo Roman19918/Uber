@@ -370,16 +370,12 @@ body {
 
 /*Intro styles start*/
 .intro {
-    background: url(../img/intro_back.webp) no-repeat center;
+    background: url(img/intro_back.webp) no-repeat center;
     background-size: cover;
     height: 100vh;
     padding-top: 27.25vh;
-    @media screen and (max-width: 992px) {
-    }
     @media screen and (max-width: 768px) {
         padding-top: 22.25vh;
-    }
-    @media screen and (max-width: 576px) {
     }
     &__main {
         padding: 0px 96px;
@@ -476,12 +472,8 @@ body {
         flex-direction: column;
         align-items: center;
         padding: 0 40px;
-        @media screen and (max-width: 992px) {
-        }
         @media screen and (max-width: 768px) {
             padding: 0 25px;
-        }
-        @media screen and (max-width: 576px) {
         }
     }
 
@@ -493,10 +485,6 @@ body {
         font-size: 38px;
         margin-bottom: 40px;
         text-align: center;
-        @media screen and (max-width: 992px) {
-        }
-        @media screen and (max-width: 768px) {
-        }
         @media screen and (max-width: 576px) {
             font-size: 25px;
         }
@@ -518,8 +506,6 @@ body {
         }
         @media screen and (max-width: 768px) {
             flex-direction: column;
-        }
-        @media screen and (max-width: 576px) {
         }
     }
 
@@ -546,10 +532,6 @@ body {
         @media screen and (max-width: 992px) {
             max-width: 90px;
         }
-        @media screen and (max-width: 768px) {
-        }
-        @media screen and (max-width: 576px) {
-        }
         @media screen and (max-width: 420px) {
             position: absolute;
             top: 0;
@@ -564,10 +546,6 @@ body {
         flex: 1 1 auto;
         margin-left: 26px;
         flex-shrink: 2;
-        @media screen and (max-width: 992px) {
-        }
-        @media screen and (max-width: 768px) {
-        }
         @media screen and (max-width: 576px) {
             margin-left: 16px;
         }
@@ -606,7 +584,7 @@ body {
     @media screen and (max-width: 576px) {
         padding: 28px 0 40px;
     }
-    background-image: url("/img/mibile-app_back.webp");
+    background-image: url("img/mibile-app_back.webp");
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -621,10 +599,6 @@ body {
     &__title {
         margin-bottom: 19px;
         text-align: center;
-        @media screen and (max-width: 992px) {
-        }
-        @media screen and (max-width: 768px) {
-        }
         @media screen and (max-width: 576px) {
             font-size: 25px;
         }
@@ -750,7 +724,7 @@ body {
 /*Slogan style start*/
 .slogan {
     padding: 56px 15px 158px;
-    background-image: url("/img/slogan_back.webp");
+    background-image: url("img/slogan_back.webp");
     background-size: auto 100%;
     @media screen and (max-width: 576px) {
         padding: 30px 15px 40px;
@@ -891,14 +865,14 @@ body {
     }
 
     .list-green &__list-item {
-        background: url("/img/green_list_ico.png") 19px 7px no-repeat;
+        background: url("img/green_list_ico.png") 19px 7px no-repeat;
         @media screen and (max-width: 420px) {
             background-position: 19px 5px;
         }
     }
 
     .list-red &__list-item {
-        background: url("/img/red_list_ico.png") 19px 7px no-repeat;
+        background: url("img/red_list_ico.png") 19px 7px no-repeat;
         @media screen and (max-width: 420px) {
             background-position: 19px 5px;
         }
@@ -955,7 +929,7 @@ body {
         justify-content: space-between;
         height: 100%;
         padding: 0 10px;
-        background: url("/img/cities_back.webp") center no-repeat;
+        background: url("img/cities_back.webp") center no-repeat;
     }
 
     &__header {
@@ -1106,16 +1080,10 @@ body {
         transform: translateX(-50%);
     }
 
-    &__menu-header {
-    }
-
     &__menu-header-list {
         display: flex;
         justify-content: space-around;
         margin-bottom: 15px;
-    }
-
-    &__menu-header-item {
     }
 
     &__menu-header-link {
@@ -1146,9 +1114,6 @@ body {
         width: 100%;
     }
 
-    &__menu-main {
-    }
-
     &__menu-main-list {
         display: flex;
         justify-content: center;
@@ -1157,9 +1122,6 @@ body {
             flex-direction: column;
             align-items: center;
         }
-    }
-
-    &__menu-main-item {
     }
 
     &__menu-main-link {
