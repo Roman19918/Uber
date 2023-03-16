@@ -999,6 +999,7 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  padding: 0 10px;
   background: url("/img/cities_back.webp") center no-repeat;
 }
 .cities__header {
@@ -1016,11 +1017,28 @@ body {
 .cities__title {
   color: #ffffff;
   margin-bottom: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
+  .cities__title {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cities__title {
+    font-size: 29px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .cities__title {
+    font-size: 25px;
+  }
 }
 .cities__subtitle {
   color: #ffffff;
   font-size: 17px;
   font-weight: 400;
+  text-align: center;
 }
 .cities__footer {
   position: relative;
