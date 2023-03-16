@@ -865,16 +865,43 @@ body {
 .conditions {
   padding: 68px 0 84px;
 }
+@media screen and (max-width: 576px) {
+  .conditions {
+    padding: 38px 0 34px;
+  }
+}
 .conditions .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
+}
+@media screen and (max-width: 768px) {
+  .conditions .wrapper {
+    padding: 0 10px;
+  }
 }
 .conditions__label {
   margin-bottom: 33px;
 }
 .conditions__title {
   margin-bottom: 33px;
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
+  .conditions__title {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .conditions__title {
+    font-size: 29px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .conditions__title {
+    font-size: 25px;
+  }
 }
 .conditions__lists {
   display: flex;
@@ -887,6 +914,18 @@ body {
   margin-bottom: 62px;
   max-width: 478px;
 }
+@media screen and (max-width: 768px) {
+  .conditions__list {
+    flex-basis: 100%;
+    margin: 20px auto;
+  }
+}
+.conditions .own-car-advantages {
+  order: -2;
+}
+.conditions .own-car-requirements {
+  order: -1;
+}
 .list-green .conditions__list-title {
   color: #1ca8c3;
 }
@@ -896,8 +935,18 @@ body {
 .list-green .conditions__list-item {
   background: url("/img/green_list_ico.png") 19px 7px no-repeat;
 }
+@media screen and (max-width: 420px) {
+  .list-green .conditions__list-item {
+    background-position: 19px 5px;
+  }
+}
 .list-red .conditions__list-item {
   background: url("/img/red_list_ico.png") 19px 7px no-repeat;
+}
+@media screen and (max-width: 420px) {
+  .list-red .conditions__list-item {
+    background-position: 19px 5px;
+  }
 }
 .conditions__list-title {
   font-family: Roboto;
@@ -905,6 +954,11 @@ body {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .conditions__list-title {
+    margin-bottom: 5px;
+  }
 }
 .conditions__list-items {
   margin-bottom: 12px;
@@ -917,6 +971,12 @@ body {
   text-align: left;
   font-weight: 300;
   padding-left: 50px;
+}
+@media screen and (max-width: 420px) {
+  .conditions__list-item {
+    font-size: 16px;
+    line-height: 28px;
+  }
 }
 .conditions__list-desc {
   font-family: Roboto;

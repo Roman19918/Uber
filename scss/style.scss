@@ -728,10 +728,18 @@ body {
 /*Conditions style start*/
 .conditions {
     padding: 68px 0 84px;
+
+    @media screen and (max-width: 576px) {
+        padding: 38px 0 34px;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0 20px;
+        @media screen and (max-width: 768px) {
+            padding: 0 10px;
+        }
     }
 
     &__label {
@@ -740,6 +748,16 @@ body {
 
     &__title {
         margin-bottom: 33px;
+        text-align: center;
+        @media screen and (max-width: 992px) {
+            font-size: 34px;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 29px;
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 25px;
+        }
     }
 
     &__lists {
@@ -753,6 +771,18 @@ body {
         flex-basis: 50%;
         margin-bottom: 62px;
         max-width: 478px;
+        @media screen and (max-width: 768px) {
+            flex-basis: 100%;
+            margin: 20px auto;
+        }
+    }
+
+    .own-car-advantages {
+        order: -2;
+    }
+
+    .own-car-requirements {
+        order: -1;
     }
 
     .list-green &__list-title {
@@ -765,10 +795,16 @@ body {
 
     .list-green &__list-item {
         background: url("/img/green_list_ico.png") 19px 7px no-repeat;
+        @media screen and (max-width: 420px) {
+            background-position: 19px 5px;
+        }
     }
 
     .list-red &__list-item {
         background: url("/img/red_list_ico.png") 19px 7px no-repeat;
+        @media screen and (max-width: 420px) {
+            background-position: 19px 5px;
+        }
     }
 
     &__list-title {
@@ -777,6 +813,9 @@ body {
         font-size: 22px;
         font-weight: 400;
         margin-bottom: 15px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 5px;
+        }
     }
 
     &__list-items {
@@ -791,6 +830,10 @@ body {
         text-align: left;
         font-weight: 300;
         padding-left: 50px;
+        @media screen and (max-width: 420px) {
+            font-size: 16px;
+            line-height: 28px;
+        }
     }
 
     &__list-desc {
@@ -912,7 +955,7 @@ body {
         position: relative;
         display: flex;
         flex-direction: column;
-        
+
         flex-basis: 390px;
     }
 
