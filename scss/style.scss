@@ -444,6 +444,7 @@ body {
             max-width: 550px;
         }
         @media screen and (max-width: 576px) {
+            padding: 0 10px;
         }
     }
 
@@ -459,7 +460,7 @@ body {
         @media screen and (max-width: 420px) {
             position: absolute;
             top: 0;
-            left: 20px;
+            left: 10px;
             width: 40px;
         }
     }
@@ -509,6 +510,9 @@ body {
 /*Mibile-app style start*/
 .mobile-app {
     padding: 48px 0 80px;
+    @media screen and (max-width: 576px) {
+        padding: 28px 0 40px;
+    }
     background-image: url("/img/mibile-app_back.webp");
     .wrapper {
         display: flex;
@@ -524,6 +528,13 @@ body {
     &__title {
         margin-bottom: 19px;
         text-align: center;
+        @media screen and (max-width: 992px) {
+        }
+        @media screen and (max-width: 768px) {
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 25px;
+        }
     }
 
     &__subtitle {
@@ -645,9 +656,12 @@ body {
 
 /*Slogan style start*/
 .slogan {
-    padding: 56px 0 158px;
+    padding: 56px 15px 158px;
     background-image: url("/img/slogan_back.webp");
     background-size: auto 100%;
+    @media screen and (max-width: 576px) {
+        padding: 30px 15px 40px;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -659,11 +673,24 @@ body {
         background-color: #ffffff;
         margin-bottom: 32px;
         font-weight: 400;
+        @media screen and (max-width: 576px) {
+            margin-bottom: 22px;
+        }
     }
 
     &__title {
         color: #ffffff;
         margin-bottom: 19px;
+        text-align: center;
+        @media screen and (max-width: 992px) {
+            font-size: 34px;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 29px;
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 25px;
+        }
     }
 
     &__subtitle {
@@ -671,6 +698,11 @@ body {
         margin-bottom: 50px;
         letter-spacing: 1px;
         font-weight: 400;
+        text-align: center;
+        @media screen and (max-width: 576px) {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
     }
 
     &__picture {
@@ -848,6 +880,7 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 50px 23px 39px;
     &__social-networks {
         padding-top: 10px;
@@ -879,6 +912,7 @@ body {
         position: relative;
         display: flex;
         flex-direction: column;
+        
         flex-basis: 390px;
     }
 
