@@ -3,7 +3,7 @@
 (function () {
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.header__menu');
-    const menuCloseItem = document.querySelector('.header__menu-close')
+    const menuCloseItem = document.querySelector('.header__menu-close');
 
 
     burgerItem.addEventListener('click', () => {
@@ -12,5 +12,5 @@
 
     menuCloseItem.addEventListener('click', () => {
         menu.classList.remove('header__menu_active');
-    })
+    });
 }());
