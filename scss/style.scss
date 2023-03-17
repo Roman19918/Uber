@@ -358,11 +358,13 @@ body {
     &__contact-button:hover,
     &__contact-button:active,
     &__contact-button:focus {
-        .button-text-medium {
-            display: none;
-        }
-        .button-text-medium-active {
-            display: block;
+        @media screen and (max-width: 768px) {
+            .button-text-medium {
+                display: none;
+            }
+            .button-text-medium-active {
+                display: block;
+            }
         }
     }
 }
