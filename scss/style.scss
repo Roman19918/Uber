@@ -60,7 +60,7 @@ body {
 
 .label-section-style.element-animation.element-show,
 .title-section-style.element-animation.element-show,
-.subtitle-section-style.element-animation.element-show{
+.subtitle-section-style.element-animation.element-show {
     opacity: 1;
     transition: all 1s;
     transform: translateY(0%);
@@ -109,7 +109,7 @@ body {
             align-items: center;
         }
     }
-    
+
     &__menu-item {
         position: relative;
         flex-grow: 1;
@@ -133,7 +133,7 @@ body {
             opacity: 1;
             border-left: 2px dotted black;
         }
-      }
+    }
 
     &__menu-item:first-child {
         border-left: none;
@@ -251,9 +251,8 @@ body {
     opacity: 0.6;
 }
 .subheader {
-    position: relative;
     z-index: 1;
-    position: absolute;
+    position: sticky;
     width: 100%;
     top: 50px;
     left: 0;
@@ -278,12 +277,12 @@ body {
         }
     }
 
-    &__logo{
+    &__logo {
         transform: translateX(-20%);
         opacity: 0;
     }
 
-    &__logo.element-animation.element-show{
+    &__logo.element-animation.element-show {
         transform: translateX(0);
         opacity: 1;
         transition: all 1s;
@@ -330,7 +329,7 @@ body {
         opacity: 0;
     }
 
-    &__contact.element-animation.element-show{
+    &__contact.element-animation.element-show {
         transform: translateX(0);
         opacity: 1;
         transition: all 1s;
@@ -393,11 +392,59 @@ body {
             font-size: 20px;
             padding: 0px 12px;
             margin-left: 20px;
+
+            animation: shake 5s;
+            animation-iteration-count: infinite;
         }
         @media screen and (max-width: 576px) {
             font-size: 35px;
             padding: 10px 10px;
             margin-left: 5px;
+        }
+    }
+
+    @keyframes shake {
+        0% {
+            transform: translate(0px, 0px) rotate(0deg);
+        }
+        79% {
+            transform: translate(0px, 0px) rotate(0deg);
+        }
+        80% {
+            transform: translate(3px, 1px) rotate(3deg);
+        }
+        82% {
+            transform: translate(-3px, -1px) rotate(-3deg);
+        }
+        84% {
+            transform: translate(3px, 1px) rotate(3deg);
+        }
+        86% {
+            transform: translate(-3px, -1px) rotate(-3deg);
+        }
+        88% {
+            transform: translate(3px, 1px) rotate(3deg);
+        }
+        90% {
+            transform: translate(-3px, -1px) rotate(-3deg);
+        }
+        92% {
+            transform: translate(3px, 1px) rotate(3deg);
+        }
+        94% {
+            transform: translate(-3px, -1px) rotate(-3deg);
+        }
+        96% {
+            transform: translate(3px, 1px) rotate(3deg);
+        }
+        98% {
+            transform: translate(-3px, -1px) rotate(-3deg);
+        }
+        99% {
+            transform: translate(3px, 1px) rotate(3deg);
+        }
+        100% {
+            transform: translate(-3px, -1px) rotate(-3deg);
         }
     }
 
@@ -418,6 +465,7 @@ body {
 
 /*Intro styles start*/
 .intro {
+    margin-top: -35px;
     background: url(../img/intro_back.webp) no-repeat center;
     background-size: cover;
     height: 100vh;
@@ -460,7 +508,7 @@ body {
         }
     }
 
-    &__title.element-animation.element-show{
+    &__title.element-animation.element-show {
         transform: translateY(0);
         opacity: 1;
         transition: all 1.5s;
@@ -490,7 +538,7 @@ body {
         }
     }
 
-    &__subtitle.element-animation.element-show{
+    &__subtitle.element-animation.element-show {
         transform: translateY(0);
         opacity: 1;
         transition: all 2s;
@@ -520,7 +568,7 @@ body {
         }
     }
 
-    &__desc.element-animation.element-show{
+    &__desc.element-animation.element-show {
         transform: translateY(0);
         opacity: 1;
         transition: all 2.5s;
@@ -534,11 +582,10 @@ body {
         animation: intro-button-send-anim 1.5s forwards 1.5s;
     }
 
-    &__button-send.element-animation.element-show{
+    &__button-send.element-animation.element-show {
         opacity: 1;
-        transition: all 2.5s;
+        transition: opacity 2.5s;
     }
-
 }
 /*Intro styles end*/
 
@@ -609,11 +656,11 @@ body {
         }
     }
 
-    &__card:nth-child(2n-1){
+    &__card:nth-child(2n-1) {
         transform: translateX(-50%);
     }
 
-    &__card:nth-child(2n){
+    &__card:nth-child(2n) {
         transform: translateX(50%);
     }
 
@@ -701,7 +748,6 @@ body {
         }
     }
 
-
     &__subtitle {
         color: #222222;
         margin-bottom: 32px;
@@ -729,45 +775,45 @@ body {
         margin: 0 2px;
     }
 
-    &__card:nth-child(3n+1){
+    &__card:nth-child(3n + 1) {
         opacity: 0;
         transform: translateX(-50%);
     }
 
-    &__card.element-animation.element-show:nth-child(3n+1){
+    &__card.element-animation.element-show:nth-child(3n + 1) {
         opacity: 1;
         transition: all 1s;
         transform: translateX(0%);
     }
 
-    &__card:nth-child(3n){
+    &__card:nth-child(3n) {
         opacity: 0;
         transform: translateX(50%);
     }
 
-    &__card.element-animation.element-show:nth-child(3n){
+    &__card.element-animation.element-show:nth-child(3n) {
         opacity: 1;
         transition: all 1s;
         transform: translateX(0%);
     }
 
-    &__card:nth-child(2){
+    &__card:nth-child(2) {
         opacity: 0;
         transform: translateY(-20%);
     }
 
-    &__card.element-animation.element-show:nth-child(2){
+    &__card.element-animation.element-show:nth-child(2) {
         opacity: 1;
         transition: all 1s;
         transform: translateX(0%);
     }
 
-    &__card:nth-child(5){
+    &__card:nth-child(5) {
         opacity: 0;
         transform: translateY(25%);
     }
 
-    &__card.element-animation.element-show:nth-child(5){
+    &__card.element-animation.element-show:nth-child(5) {
         opacity: 1;
         transition: all 1s;
         transform: translateX(0%);
@@ -909,7 +955,7 @@ body {
         font-weight: 400;
         text-align: center;
         @media screen and (max-width: 576px) {
-            margin-bottom: 20px;
+            margin-bottom: 100px;
             font-size: 16px;
         }
     }
@@ -921,7 +967,7 @@ body {
         z-index: 2;
     }
 
-    &__back{
+    &__back {
         position: absolute;
         transform: translateY(-49.81%);
         left: 11.5%;
@@ -931,7 +977,7 @@ body {
         opacity: 0;
     }
 
-    &__back.element-animation.element-show{
+    &__back.element-animation.element-show {
         animation: slogan-back-anim 2s forwards 2s;
     }
 
@@ -939,50 +985,58 @@ body {
         0% {
             opacity: 0;
         }
-        100%{
+        100% {
             opacity: 1;
         }
     }
 
-    &__picture-car{
+    &__picture-car {
         position: relative;
         width: 100%;
         z-index: 4;
-        left: -100%;
+        transform: translateX(-50%);
         opacity: 0;
     }
 
-    &__picture-car.element-animation.element-show{
+    @media screen and (max-width: 992px) {
+        &__picture-car {
+            transform: translateX(-20%);
+        }
+    }
+    @media screen and (max-width: 768px) {
+    }
+    @media screen and (max-width: 576px) {
+    }
+
+    &__picture-car.element-animation.element-show {
         animation: slogan-car-anim 4s forwards;
     }
 
     @keyframes slogan-car-anim {
         0% {
-            left: -100%;
-            opacity: 0;
         }
-        40%{
+        40% {
             opacity: 1;
         }
-        100%{
+        100% {
             transition: all 3s;
-            left: 0;
+            transform: translateX(0);
             opacity: 1;
         }
     }
 
-    &__car{
+    &__car {
         width: 100%;
     }
 
-    &__rear-wheel{
+    &__rear-wheel {
         position: absolute;
         width: 14.89%;
         left: 13.63%;
         bottom: 27.2%;
     }
 
-    &__rear-wheel.element-animation.element-show{
+    &__rear-wheel.element-animation.element-show {
         animation: rear-wheel-anim 4s forwards;
         z-index: 5;
     }
@@ -991,24 +1045,22 @@ body {
         0% {
             transform: rotate(0deg);
         }
-        40%{
+        40% {
             opacity: 1;
         }
-        100%{
+        100% {
             transform: rotate(350deg);
         }
     }
 
-
-
-    &__front-wheel{
+    &__front-wheel {
         position: absolute;
         width: 14.89%;
         right: 10.34%;
         bottom: 26.72%;
     }
 
-    &__front-wheel.element-animation.element-show{
+    &__front-wheel.element-animation.element-show {
         animation: front-wheel-anim 4s forwards;
         z-index: 5;
     }
@@ -1017,15 +1069,13 @@ body {
         0% {
             transform: rotate(0deg);
         }
-        40%{
+        40% {
             opacity: 1;
         }
-        100%{
+        100% {
             transform: rotate(360deg);
         }
     }
-
-
 
     &__text {
         color: #222222;
@@ -1034,6 +1084,23 @@ body {
         font-weight: 300;
         line-height: 24px;
         text-align: center;
+        transform: translateY(-200%);
+    }
+
+    &__text.element-animation.element-show {
+        animation: slogan-text-anim 4s forwards;
+    }
+
+    @keyframes slogan-text-anim {
+        0% {
+            transform: translateY(-200%);
+            opacity: 0;
+        }
+        100% {
+            transition: all 1s;
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
 }
 /*Slogan style end*/
@@ -1041,7 +1108,6 @@ body {
 /*Conditions style start*/
 .conditions {
     padding: 68px 0 84px;
-
     @media screen and (max-width: 576px) {
         padding: 38px 0 34px;
     }
@@ -1153,6 +1219,50 @@ body {
         }
     }
 
+    &__list.own-car-advantages > .element-animation,
+    &__list.own-car-requirements > .element-animation {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    &__list.own-car-advantages > .element-animation.element-show,
+    &__list.own-car-requirements > .element-animation.element-show {
+        animation: conditions-item-left-anim 1s forwards;
+    }
+
+    @keyframes conditions-item-left-anim {
+        0% {
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    &__list.сompany-car-advantages > .element-animation,
+    &__list.сompany-car-requirements > .element-animation {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    &__list.сompany-car-advantages > .element-animation.element-show,
+    &__list.сompany-car-requirements > .element-animation.element-show {
+        animation: conditions-item-right-anim 1s forwards;
+    }
+
+    @keyframes conditions-item-right-anim {
+        0% {
+            transform: translateX(50%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
     &__list-desc {
         font-family: Roboto;
         font-size: 17px;
@@ -1224,6 +1334,21 @@ body {
         font-weight: 400;
         text-align: center;
         text-transform: uppercase;
+    }
+
+    &__footer.element-animation.element-show {
+        animation: cities-footer-anim 2s forwards;
+    }
+
+    @keyframes cities-footer-anim {
+        0% {
+            transform: translateY(200%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
 
     &__footer:after {
@@ -1370,7 +1495,7 @@ body {
         }
     }
 
-    &__menu-main-item{
+    &__menu-main-item {
         @media screen and (max-width: 576px) {
             margin-bottom: 10px;
         }

@@ -394,9 +394,8 @@ body {
 }
 
 .subheader {
-  position: relative;
   z-index: 1;
-  position: absolute;
+  position: sticky;
   width: 100%;
   top: 50px;
   left: 0;
@@ -526,6 +525,8 @@ body {
     font-size: 20px;
     padding: 0px 12px;
     margin-left: 20px;
+    animation: shake 5s;
+    animation-iteration-count: infinite;
   }
   .subheader__contact-button .button-text-large {
     display: none;
@@ -541,6 +542,50 @@ body {
     margin-left: 5px;
   }
 }
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  79% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  80% {
+    transform: translate(3px, 1px) rotate(3deg);
+  }
+  82% {
+    transform: translate(-3px, -1px) rotate(-3deg);
+  }
+  84% {
+    transform: translate(3px, 1px) rotate(3deg);
+  }
+  86% {
+    transform: translate(-3px, -1px) rotate(-3deg);
+  }
+  88% {
+    transform: translate(3px, 1px) rotate(3deg);
+  }
+  90% {
+    transform: translate(-3px, -1px) rotate(-3deg);
+  }
+  92% {
+    transform: translate(3px, 1px) rotate(3deg);
+  }
+  94% {
+    transform: translate(-3px, -1px) rotate(-3deg);
+  }
+  96% {
+    transform: translate(3px, 1px) rotate(3deg);
+  }
+  98% {
+    transform: translate(-3px, -1px) rotate(-3deg);
+  }
+  99% {
+    transform: translate(3px, 1px) rotate(3deg);
+  }
+  100% {
+    transform: translate(-3px, -1px) rotate(-3deg);
+  }
+}
 @media screen and (max-width: 768px) {
   .subheader__contact-button:hover .button-text-medium, .subheader__contact-button:active .button-text-medium, .subheader__contact-button:focus .button-text-medium {
     display: none;
@@ -553,6 +598,7 @@ body {
 /*Subheader styles end*/
 /*Intro styles start*/
 .intro {
+  margin-top: -35px;
   background: url(../img/intro_back.webp) no-repeat center;
   background-size: cover;
   height: 100vh;
@@ -693,7 +739,7 @@ body {
 }
 .intro__button-send.element-animation.element-show {
   opacity: 1;
-  transition: all 2.5s;
+  transition: opacity 2.5s;
 }
 
 /*Intro styles end*/
@@ -1059,7 +1105,7 @@ body {
 }
 @media screen and (max-width: 576px) {
   .slogan__subtitle {
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     font-size: 16px;
   }
 }
@@ -1093,23 +1139,24 @@ body {
   position: relative;
   width: 100%;
   z-index: 4;
-  left: -100%;
+  transform: translateX(-50%);
   opacity: 0;
+}
+@media screen and (max-width: 992px) {
+  .slogan__picture-car {
+    transform: translateX(-20%);
+  }
 }
 .slogan__picture-car.element-animation.element-show {
   animation: slogan-car-anim 4s forwards;
 }
 @keyframes slogan-car-anim {
-  0% {
-    left: -100%;
-    opacity: 0;
-  }
   40% {
     opacity: 1;
   }
   100% {
     transition: all 3s;
-    left: 0;
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -1165,6 +1212,21 @@ body {
   font-weight: 300;
   line-height: 24px;
   text-align: center;
+  transform: translateY(-200%);
+}
+.slogan__text.element-animation.element-show {
+  animation: slogan-text-anim 4s forwards;
+}
+@keyframes slogan-text-anim {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  100% {
+    transition: all 1s;
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*Slogan style end*/
@@ -1289,6 +1351,40 @@ body {
     line-height: 28px;
   }
 }
+.conditions__list.own-car-advantages > .element-animation, .conditions__list.own-car-requirements > .element-animation {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.conditions__list.own-car-advantages > .element-animation.element-show, .conditions__list.own-car-requirements > .element-animation.element-show {
+  animation: conditions-item-left-anim 1s forwards;
+}
+@keyframes conditions-item-left-anim {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.conditions__list.сompany-car-advantages > .element-animation, .conditions__list.сompany-car-requirements > .element-animation {
+  transform: translateX(50%);
+  opacity: 0;
+}
+.conditions__list.сompany-car-advantages > .element-animation.element-show, .conditions__list.сompany-car-requirements > .element-animation.element-show {
+  animation: conditions-item-right-anim 1s forwards;
+}
+@keyframes conditions-item-right-anim {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .conditions__list-desc {
   font-family: Roboto;
   font-size: 17px;
@@ -1361,6 +1457,19 @@ body {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+}
+.cities__footer.element-animation.element-show {
+  animation: cities-footer-anim 2s forwards;
+}
+@keyframes cities-footer-anim {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .cities__footer:after {
   position: absolute;
