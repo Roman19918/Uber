@@ -37,6 +37,8 @@ body {
     font-family: "Roboto";
     font-size: 11px;
     font-weight: 100;
+    opacity: 0;
+    transform: translateY(-100%);
 }
 
 .title-section-style {
@@ -45,12 +47,23 @@ body {
     font-size: 38px;
     font-weight: 700;
     text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(-100%);
 }
 
 .subtitle-section-style {
     font-family: Roboto;
     font-size: 17px;
     font-weight: 600;
+    transform: translateY(-200%);
+}
+
+.label-section-style.element-animation.element-show,
+.title-section-style.element-animation.element-show,
+.subtitle-section-style.element-animation.element-show{
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
 }
 
 /*Header styles start*/
@@ -96,17 +109,31 @@ body {
             align-items: center;
         }
     }
-
+    
     &__menu-item {
         position: relative;
         flex-grow: 1;
-        border-left: 2px dotted black;
         text-align: center;
+        transform: translateY(50%);
+        animation: header-menu-anim 1s forwards;
+        opacity: 0;
         @media screen and (max-width: 768px) {
             margin-bottom: 30px;
             border: none;
         }
     }
+
+    @keyframes header-menu-anim {
+        0% {
+            transform: translateY(50%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+            border-left: 2px dotted black;
+        }
+      }
 
     &__menu-item:first-child {
         border-left: none;
@@ -251,6 +278,17 @@ body {
         }
     }
 
+    &__logo{
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+
+    &__logo.element-animation.element-show{
+        transform: translateX(0);
+        opacity: 1;
+        transition: all 1s;
+    }
+
     &__logo-title {
         display: flex;
         align-items: center;
@@ -288,6 +326,14 @@ body {
 
     &__contact {
         display: flex;
+        transform: translateX(20%);
+        opacity: 0;
+    }
+
+    &__contact.element-animation.element-show{
+        transform: translateX(0);
+        opacity: 1;
+        transition: all 1s;
     }
 
     &__contact-desc {
@@ -400,6 +446,9 @@ body {
         text-transform: uppercase;
         font-size: 60px;
         margin-bottom: 2.625vh;
+        transform: translateY(100%);
+        opacity: 0;
+
         @media screen and (max-width: 992px) {
             font-size: 53px;
         }
@@ -411,11 +460,19 @@ body {
         }
     }
 
+    &__title.element-animation.element-show{
+        transform: translateY(0);
+        opacity: 1;
+        transition: all 1.5s;
+    }
+
     &__subtitle {
         font-size: 36px;
         text-transform: uppercase;
         font-weight: 700;
         margin-bottom: 2.875vh;
+        transform: translateY(100%);
+        opacity: 0;
         @media screen and (max-width: 992px) {
             font-size: 32px;
             line-height: 39px;
@@ -433,10 +490,18 @@ body {
         }
     }
 
+    &__subtitle.element-animation.element-show{
+        transform: translateY(0);
+        opacity: 1;
+        transition: all 2s;
+    }
+
     &__desc {
         font-size: 18px;
         line-height: 24px;
         margin-bottom: 12.15vh;
+        transform: translateY(50%);
+        opacity: 0;
         @media screen and (max-width: 992px) {
             font-size: 18px;
         }
@@ -455,11 +520,25 @@ body {
         }
     }
 
+    &__desc.element-animation.element-show{
+        transform: translateY(0);
+        opacity: 1;
+        transition: all 2.5s;
+    }
+
     &__button-send {
         font-size: 18px;
         line-height: 63px;
         padding: 0px 39px;
+        opacity: 0;
+        animation: intro-button-send-anim 1.5s forwards 1.5s;
     }
+
+    &__button-send.element-animation.element-show{
+        opacity: 1;
+        transition: all 2.5s;
+    }
+
 }
 /*Intro styles end*/
 
@@ -518,6 +597,7 @@ body {
         flex: 1 1 50%;
         padding: 0 50px;
         margin-bottom: 35px;
+        opacity: 0;
         @media screen and (max-width: 992px) {
             padding: 0 20px;
         }
@@ -527,6 +607,20 @@ body {
         @media screen and (max-width: 576px) {
             padding: 0 10px;
         }
+    }
+
+    &__card:nth-child(2n-1){
+        transform: translateX(-50%);
+    }
+
+    &__card:nth-child(2n){
+        transform: translateX(50%);
+    }
+
+    &__card.element-animation.element-show {
+        opacity: 1;
+        transition: all 1s;
+        transform: translateX(0%);
     }
 
     &__card-pic {
@@ -578,6 +672,7 @@ body {
         line-height: 21px;
     }
 }
+
 /*Advantages styles end*/
 
 /*Mibile-app style start*/
@@ -606,6 +701,7 @@ body {
         }
     }
 
+
     &__subtitle {
         color: #222222;
         margin-bottom: 32px;
@@ -631,13 +727,57 @@ body {
         flex-grow: 2;
         height: 280px;
         margin: 0 2px;
-        transition: all 0.3s;
+    }
+
+    &__card:nth-child(3n+1){
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    &__card.element-animation.element-show:nth-child(3n+1){
+        opacity: 1;
+        transition: all 1s;
+        transform: translateX(0%);
+    }
+
+    &__card:nth-child(3n){
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    &__card.element-animation.element-show:nth-child(3n){
+        opacity: 1;
+        transition: all 1s;
+        transform: translateX(0%);
+    }
+
+    &__card:nth-child(2){
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+
+    &__card.element-animation.element-show:nth-child(2){
+        opacity: 1;
+        transition: all 1s;
+        transform: translateX(0%);
+    }
+
+    &__card:nth-child(5){
+        opacity: 0;
+        transform: translateY(25%);
+    }
+
+    &__card.element-animation.element-show:nth-child(5){
+        opacity: 1;
+        transition: all 1s;
+        transform: translateX(0%);
     }
 
     &__card:hover,
     &__card:active,
     &__card:focus {
         transform: scale(1.05);
+        transition: all 0.3s;
     }
 
     &__card-title {
@@ -1123,6 +1263,12 @@ body {
         @media screen and (max-width: 576px) {
             flex-direction: column;
             align-items: center;
+        }
+    }
+
+    &__menu-main-item{
+        @media screen and (max-width: 576px) {
+            margin-bottom: 10px;
         }
     }
 
