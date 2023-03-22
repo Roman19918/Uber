@@ -904,7 +904,7 @@ body {
 
     &__subtitle {
         color: #ffffff;
-        margin-bottom: 50px;
+        margin-bottom: 208px;
         letter-spacing: 1px;
         font-weight: 400;
         text-align: center;
@@ -915,13 +915,117 @@ body {
     }
 
     &__picture {
+        position: relative;
         max-width: 759px;
         margin-bottom: 4px;
+        z-index: 2;
     }
 
-    &__img {
+    &__back{
+        position: absolute;
+        transform: translateY(-49.81%);
+        left: 11.5%;
+        max-width: 76.81%;
+        margin: auto;
+        z-index: 3;
+        opacity: 0;
+    }
+
+    &__back.element-animation.element-show{
+        animation: slogan-back-anim 2s forwards 2s;
+    }
+
+    @keyframes slogan-back-anim {
+        0% {
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    &__picture-car{
+        position: relative;
+        width: 100%;
+        z-index: 4;
+        left: -100%;
+        opacity: 0;
+    }
+
+    &__picture-car.element-animation.element-show{
+        animation: slogan-car-anim 4s forwards;
+    }
+
+    @keyframes slogan-car-anim {
+        0% {
+            left: -100%;
+            opacity: 0;
+        }
+        40%{
+            opacity: 1;
+        }
+        100%{
+            transition: all 3s;
+            left: 0;
+            opacity: 1;
+        }
+    }
+
+    &__car{
         width: 100%;
     }
+
+    &__rear-wheel{
+        position: absolute;
+        width: 14.89%;
+        left: 13.63%;
+        bottom: 27.2%;
+    }
+
+    &__rear-wheel.element-animation.element-show{
+        animation: rear-wheel-anim 4s forwards;
+        z-index: 5;
+    }
+
+    @keyframes rear-wheel-anim {
+        0% {
+            transform: rotate(0deg);
+        }
+        40%{
+            opacity: 1;
+        }
+        100%{
+            transform: rotate(350deg);
+        }
+    }
+
+
+
+    &__front-wheel{
+        position: absolute;
+        width: 14.89%;
+        right: 10.34%;
+        bottom: 26.72%;
+    }
+
+    &__front-wheel.element-animation.element-show{
+        animation: front-wheel-anim 4s forwards;
+        z-index: 5;
+    }
+
+    @keyframes front-wheel-anim {
+        0% {
+            transform: rotate(0deg);
+        }
+        40%{
+            opacity: 1;
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+
 
     &__text {
         color: #222222;
