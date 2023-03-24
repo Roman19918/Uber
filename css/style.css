@@ -1459,7 +1459,7 @@ body {
   text-transform: uppercase;
 }
 .cities__footer.element-animation.element-show {
-  animation: cities-footer-anim 2s forwards;
+  animation: cities-footer-anim 1s forwards;
 }
 @keyframes cities-footer-anim {
   0% {
@@ -1523,6 +1523,19 @@ body {
     margin-bottom: 20px;
   }
 }
+.footer__social-networks.element-animation.element-show {
+  animation: social-networks-anim 1s forwards;
+}
+@keyframes social-networks-anim {
+  0% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .footer__social-networks-link {
   font-size: 32px;
   color: black;
@@ -1559,6 +1572,19 @@ body {
     flex-basis: 100%;
     min-width: 100%;
     margin-bottom: 20px;
+  }
+}
+.footer__menu.element-animation.element-show {
+  animation: footer-menu-anim 1s forwards;
+}
+@keyframes footer-menu-anim {
+  0% {
+    transform: scaleX(130%);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(100%);
+    opacity: 1;
   }
 }
 .footer__menu:after {
@@ -1687,6 +1713,19 @@ body {
     display: flex;
     justify-content: center;
     max-width: 100%;
+  }
+}
+.footer__stores.element-animation.element-show {
+  animation: stores-anim 1s forwards;
+}
+@keyframes stores-anim {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .footer__stores-link {
